@@ -6,9 +6,14 @@
 #include <iostream>
 #include "crypto.h"
 
-int main() {
+int main(int argc, char* argv[]) {
+    if (argc < 3) {
+        std::cout << "Usage: " << argv[0] << " <device_id> <expire_date>";
+        return 1;
+    }
+    crypto::LicenseData lic1 {argv[1], argv[2]};
+    std::cout << lic1.device_id << lic1.expire_date << std::endl;
 
-    crypto::LicenseData lic1 {"device12345", "20250131"};
     std::string basic_string = crypto::sign_license(lic1);
     std::cout << basic_string << std::endl;
     // bool verify_license = crypto::verify_license(lic1, basic_string);
