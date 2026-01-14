@@ -1,6 +1,10 @@
 #pragma once
 #include <string>
 
+#ifndef LANGUAGE_CPLUSPLUS_PROJECT_CRYPTO_H
+#define LANGUAGE_CPLUSPLUS_PROJECT_CRYPTO_H
+
+
 namespace crypto {
 
     struct LicenseData {
@@ -20,3 +24,5 @@ namespace crypto {
     );
 
 }
+
+#endif //LANGUAGE_CPLUSPLUS_PROJECT_CRYPTO_H
