@@ -1,7 +1,7 @@
 
 
 
-add_library(algjar main.cpp)
-target_link_libraries(algjar PRIVATE utils encrypt decrypt)
+add_executable(algjar main.cpp)
+target_link_libraries(algjar PRIVATE utils encrypt)
 
 

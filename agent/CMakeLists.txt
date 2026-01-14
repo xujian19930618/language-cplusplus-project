@@ -11,4 +11,5 @@ target_include_directories(agent
         PRIVATE ${JNI_INCLUDE_DIRS}
 )
 
-target_link_libraries(agent PUBLIC ${JNI_LIBRARIES} utils encrypt decrypt)
+target_link_libraries(agent PRIVATE utils decrypt)
+# ${JNI_LIBRARIES}

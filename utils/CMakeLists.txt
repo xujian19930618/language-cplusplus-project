@@ -1,6 +1,5 @@
-add_library(utils
+add_library(utils STATIC
         src/utils.cpp
-        inc/utils.h
 )
 
 target_include_directories(utils PUBLIC inc)

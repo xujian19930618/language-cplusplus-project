@@ -4,8 +4,7 @@ project(language-cplusplus-project)
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(utils)
-add_subdirectory(encrypt)
-add_subdirectory(decrypt)
+add_subdirectory(crypto)
 add_subdirectory(agent)
 add_subdirectory(app)
 add_subdirectory(cplusplus)
@@ -18,8 +17,8 @@ add_executable(exec
         $<TARGET_OBJECTS:encrypt>
         $<TARGET_OBJECTS:decrypt>
         $<TARGET_OBJECTS:agent>
-        $<TARGET_OBJECTS:cplusplus>
-#        $<TARGET_OBJECTS:algjar>
+#        $<TARGET_OBJECTS:cplusplus>
+        $<TARGET_OBJECTS:algjar>
 )
 
 # 链接第三方库
