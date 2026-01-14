@@ -4,9 +4,9 @@ project(language-cplusplus-project)
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(utils)
-add_subdirectory(license_crypto)
-add_subdirectory(license_agent)
-add_subdirectory(keygen)
+add_subdirectory(jni_crypto)
+add_subdirectory(jni_agent)
+add_subdirectory(jni_keygen)
 add_subdirectory(cplusplus)
 
 find_package(OpenSSL REQUIRED)
