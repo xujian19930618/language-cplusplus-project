@@ -4,9 +4,9 @@ project(language-cplusplus-project)
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(utils)
-add_subdirectory(crypto)
-add_subdirectory(agent)
-add_subdirectory(app)
+add_subdirectory(license_crypto)
+add_subdirectory(license_agent)
+add_subdirectory(keygen)
 add_subdirectory(cplusplus)
 
 find_package(OpenSSL REQUIRED)
@@ -17,8 +17,8 @@ add_executable(exec
         $<TARGET_OBJECTS:encrypt>
         $<TARGET_OBJECTS:decrypt>
         $<TARGET_OBJECTS:agent>
-#        $<TARGET_OBJECTS:cplusplus>
-        $<TARGET_OBJECTS:algjar>
+        $<TARGET_OBJECTS:cplusplus>
+#        $<TARGET_OBJECTS:algjar>
 )
 
 # 链接第三方库
@@ -26,29 +26,6 @@ target_link_libraries(exec PRIVATE openssl::openssl)
 
 # 防止 “cannot determine linker language”
 set_target_properties(exec PROPERTIES LINKER_LANGUAGE CXX)
-
-#add_library(UsbDriver SHARED
-#        Src/UsbDriver.cpp
-#        Src/Logger.cpp
-#        Src/JVMMonitor.cpp
-#        Src/JClassUtil.cpp
-#        Src/AlgorithmLoader.cpp
-#        Src/PackDecryptorBuffer.cpp
-#        Src/PackEncryptor.cpp
-#        Src/Base64Util.cpp
-#        Src/VerifyFile.cpp
-#        src/CoreLogic.cpp
-#)
-#add_executable(jni main.cpp
-#        encrypt/src/Encryptor.cpp
-#        encrypt/inc/Encryptor.h
-#        decrypt/src/Decryptor.cpp
-#        decrypt/inc/Decryptor.h
-#        agent/src/agentService.cpp
-#        agent/inc/agentService.h
-#        app/main.cpp
-#)
-
 
 ## 为了将最终产物复制到指定位置
 set(FINAL_OUTPUT_DIR "${PROJECT_SOURCE_DIR}/bin")
@@ -81,7 +58,7 @@ set_target_properties(encrypt PROPERTIES
         ARCHIVE_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR}
 )
 # 配置 app 可执行文件
-#set_target_properties(algjar PROPERTIES
+#set_target_properties(keygen PROPERTIES
 #        RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR}
 #)
 # 配置 exec 可执行文件
