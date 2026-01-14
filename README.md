@@ -62,7 +62,7 @@
 │   ├── timer_class.cpp      # 定时器封装
 │   └── memory_pool.cpp      # 静态内存池
 │
-├── include/                 # 公共头文件（可选）
+├── inc/                 # 公共头文件（可选）
 │   └── common.h
 │
 ├── CMakeLists.txt           # 构建配置

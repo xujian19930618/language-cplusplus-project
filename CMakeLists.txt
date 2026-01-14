@@ -42,11 +42,11 @@ set_target_properties(exec PROPERTIES LINKER_LANGUAGE CXX)
 #)
 #add_executable(jni main.cpp
 #        encrypt/src/Encryptor.cpp
-#        encrypt/include/Encryptor.h
+#        encrypt/inc/Encryptor.h
 #        decrypt/src/Decryptor.cpp
-#        decrypt/include/Decryptor.h
+#        decrypt/inc/Decryptor.h
 #        agent/src/agentService.cpp
-#        agent/include/agentService.h
+#        agent/inc/agentService.h
 #        app/main.cpp
 #)
 

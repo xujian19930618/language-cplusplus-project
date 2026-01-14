@@ -1,9 +1,9 @@
 add_library(utils
         src/utils.cpp
-        include/utils.h
+        inc/utils.h
 )
 
-target_include_directories(utils PUBLIC include)
+target_include_directories(utils PUBLIC inc)
 
 find_package(OpenSSL REQUIRED)
 

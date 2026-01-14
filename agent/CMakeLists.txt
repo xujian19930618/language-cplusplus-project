@@ -1,13 +1,13 @@
 add_library(agent SHARED
         src/Agent.cpp
-        include/Agent.h
+        inc/Agent.h
         jni/HelloJni.cpp
 )
-#target_include_directories(agent PUBLIC include)
+#target_include_directories(agent PUBLIC inc)
 
 find_package(JNI REQUIRED)
 target_include_directories(agent
-        PUBLIC include
+        PUBLIC inc
         PRIVATE ${JNI_INCLUDE_DIRS}
 )
 
