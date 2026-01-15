@@ -22,7 +22,7 @@ add_executable(exec
 )
 
 # 链接第三方库
-target_link_libraries(exec PRIVATE openssl::openssl)
+target_link_libraries(exec PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 
 # 防止 “cannot determine linker language”
 set_target_properties(exec PROPERTIES LINKER_LANGUAGE CXX)

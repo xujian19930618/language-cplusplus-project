@@ -12,10 +12,10 @@ class ConanApplication(ConanFile):
     def layout(self):
         cmake_layout(self)
 
-    def generate(self):
-        tc = CMakeToolchain(self)
-        tc.user_presets_path = False
-        tc.generate()
+    # def generate(self):
+        # tc = CMakeToolchain(self)
+        # tc.user_presets_path = False
+        # tc.generate()
 
     def requirements(self):
         requirements = self.conan_data.get('requirements', [])
