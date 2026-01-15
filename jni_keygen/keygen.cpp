@@ -11,6 +11,7 @@ int main(int argc, char* argv[]) {
         std::cout << "Usage: " << argv[0] << " <device_id> <expire_date>";
         return 1;
     }
+
     crypto::LicenseData lic1 {argv[1], argv[2]};
     std::cout << lic1.device_id << lic1.expire_date << std::endl;
 

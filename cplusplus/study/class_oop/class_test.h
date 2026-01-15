@@ -1,0 +1,13 @@
+//
+// Created by 徐剑 on 2026/1/15.
+//
+
+#ifndef LANGUAGE_CPLUSPLUS_PROJECT_CLASS_TEST_H
+#define LANGUAGE_CPLUSPLUS_PROJECT_CLASS_TEST_H
+
+#include "Box.h"
+
+int box_test();
+
+
+#endif //LANGUAGE_CPLUSPLUS_PROJECT_CLASS_TEST_H
