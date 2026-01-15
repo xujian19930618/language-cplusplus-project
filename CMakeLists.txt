@@ -1,15 +1,25 @@
 cmake_minimum_required(VERSION 4.0)
 project(language-cplusplus-project)
 
+# 强制使用Apple Clang编译器
+# set(CMAKE_C_COMPILER /usr/bin/clang)
+# set(CMAKE_CXX_COMPILER /usr/bin/clang++)
+
+# 优先使用Config.cmake文件而不是Find模块
+# set(CMAKE_FIND_PACKAGE_PREFER_CONFIG ON)
+
 set(CMAKE_CXX_STANDARD 20)
+
+# 设置conan generators路径
+# set(CMAKE_PREFIX_PATH "${CMAKE_BINARY_DIR}/Release/generators")
+
+find_package(OpenSSL)
 
 add_subdirectory(utils)
 add_subdirectory(jni_crypto)
 add_subdirectory(jni_agent)
 add_subdirectory(jni_keygen)
 add_subdirectory(cplusplus)
-
-find_package(OpenSSL REQUIRED)
 
 # 最终可执行文件
 add_executable(exec
@@ -22,7 +32,7 @@ add_executable(exec
 )
 
 # 链接第三方库
-target_link_libraries(exec PRIVATE OpenSSL::SSL OpenSSL::Crypto)
+target_link_libraries(exec PRIVATE openssl::openssl)
 
 # 防止 “cannot determine linker language”
 set_target_properties(exec PROPERTIES LINKER_LANGUAGE CXX)
