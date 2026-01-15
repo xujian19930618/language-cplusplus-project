@@ -15,5 +15,7 @@ add_library(cplusplus OBJECT
         study/class_oop/Box.h
         study/class_oop/class_test.cpp
         study/class_oop/class_test.h
+        study/class_oop/Shape.cpp
+        study/class_oop/Shape.h
 )
 target_include_directories(cplusplus PUBLIC inc study)

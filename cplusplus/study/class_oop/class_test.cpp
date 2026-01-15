@@ -4,6 +4,11 @@
 
 #include "class_test.h"
 #include <iostream>
+
+
+#include "Box.h"
+#include "Shape.h"
+
 using namespace std;
 
 
@@ -39,4 +44,25 @@ int box_test() {
     cout << "Box3 的体积：" << volume <<endl;
     return 0;
 
+}
+
+
+int shape_test()
+{
+    Rectangle Rect;
+    int area;
+
+    Rect.setWidth(5);
+    Rect.setHeight(7);
+
+    area = Rect.getArea();
+
+    // 输出对象的面积
+    cout << "Total area: " << Rect.getArea() << endl;
+
+    // 输出总花费
+    cout << "Total paint cost: $" << Rect.getCost(area) << endl;
+
+    return 0;
+    return 0;
 }

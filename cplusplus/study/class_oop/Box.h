@@ -1,6 +1,6 @@
 //
 // Created by 徐剑 on 2026/1/15.
-//
+// 类与对象
 
 #ifndef LANGUAGE_CPLUSPLUS_PROJECT_BOX_H
 #define LANGUAGE_CPLUSPLUS_PROJECT_BOX_H

@@ -2,6 +2,8 @@
 #include "main.h"
 #include <iostream>
 
+#include "class_oop/class_test.h"
+
 int main() {
 
 
@@ -28,5 +30,6 @@ int basics() {
 
 int class_oop() {
     box_test();
+    shape_test();
     return 0;
 }

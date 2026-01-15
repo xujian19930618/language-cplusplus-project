@@ -5,9 +5,8 @@
 #ifndef LANGUAGE_CPLUSPLUS_PROJECT_CLASS_TEST_H
 #define LANGUAGE_CPLUSPLUS_PROJECT_CLASS_TEST_H
 
-#include "Box.h"
-
 int box_test();
 
+int shape_test();
 
 #endif //LANGUAGE_CPLUSPLUS_PROJECT_CLASS_TEST_H

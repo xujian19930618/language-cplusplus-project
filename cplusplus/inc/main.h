@@ -5,8 +5,6 @@
 #ifndef LANGUAGE_CPLUSPLUS_PROJECT_MAIN_H
 #define LANGUAGE_CPLUSPLUS_PROJECT_MAIN_H
 
-#include "class_oop/class_test.h"
-
 int basics();
 
 
