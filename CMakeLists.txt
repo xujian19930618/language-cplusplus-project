@@ -11,7 +11,11 @@ project(language-cplusplus-project)
 set(CMAKE_CXX_STANDARD 20)
 
 # 设置conan generators路径
-# set(CMAKE_PREFIX_PATH "${CMAKE_BINARY_DIR}/Release/generators")
+#if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+#    set(CMAKE_PREFIX_PATH "${CMAKE_BINARY_DIR}/conan/build/Debug/generators")
+#else()
+#    set(CMAKE_PREFIX_PATH "${CMAKE_BINARY_DIR}/conan/build/Release/generators")
+#endif()
 
 find_package(OpenSSL)
 
