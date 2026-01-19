@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.31.10)
 project(language-cplusplus-project)
 
 # 强制使用Apple Clang编译器
