@@ -1,0 +1,14 @@
+# 文件名：docker-compose.yml
+name: cplusplus
+services:
+  cplusplus:
+    container_name: cplusplus
+    image: fedora:44
+    volumes:
+      - ./:/data
+    command: ["/bin/bash", "-c", "dnf clean all && dnf -y --refresh upgrade && dnf -y install gcc gcc-c++ make cmake glibc-devel libstdc++-devel git && dnf clean all && rm -rf /var/cache/dnf/* && tail -f /dev/null"]
+    networks:
+      - cplusplus
+networks:
+  cplusplus:
+    driver: bridge
