@@ -1,5 +1,5 @@
-add_library(cplusplus OBJECT
-        src/main.cpp
+
+add_library(cplusplus STATIC
         study/basics/arrays_strings.cpp
         study/basics/functions.cpp
         study/basics/control_flow.cpp

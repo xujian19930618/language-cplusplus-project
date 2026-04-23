@@ -12,6 +12,12 @@ set(CMAKE_CXX_STANDARD 20)
 #add_subdirectory(jni_keygen)
 add_subdirectory(cplusplus)
 
+
+add_executable( cplusplus1
+        src/main.cpp
+)
+target_link_libraries(cplusplus1 PRIVATE cplusplus)
+
 # 最终可执行文件
 #add_executable(exec
 #        $<TARGET_OBJECTS:utils>
@@ -19,7 +25,7 @@ add_subdirectory(cplusplus)
 #        $<TARGET_OBJECTS:decrypt>
 #        $<TARGET_OBJECTS:agent>
 #        $<TARGET_OBJECTS:cplusplus>
-##        $<TARGET_OBJECTS:algjar>
+#        $<TARGET_OBJECTS:algjar>
 #)
 #
 ## 链接第三方库
@@ -29,15 +35,15 @@ add_subdirectory(cplusplus)
 #set_target_properties(exec PROPERTIES LINKER_LANGUAGE CXX)
 #
 ### 为了将最终产物复制到指定位置
-#set(FINAL_OUTPUT_DIR "${PROJECT_SOURCE_DIR}/bin")
-#file(MAKE_DIRECTORY ${FINAL_OUTPUT_DIR})
+set(FINAL_OUTPUT_DIR "${PROJECT_SOURCE_DIR}/bin")
+file(MAKE_DIRECTORY ${FINAL_OUTPUT_DIR})
 #
 #
 ## 2. 配置目标产物的输出目录（适用于 add_library()/add_executable() 定义的目标）
 ## 方式1：全局配置（所有目标的产物都生成到 FINAL_OUTPUT_DIR）
 #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR})  # 共享库（.dylib/.so）
 #set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR})  # 静态库（.a/.lib）
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR})  # 可执行文件（.exe）
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR})  # 可执行文件（.exe）
 #
 ## 方式2：单独配置 UsbDriver 目标（仅该目标的产物生成到自定义目录，推荐）
 #set_target_properties(agent PROPERTIES
@@ -62,6 +68,12 @@ add_subdirectory(cplusplus)
 ##set_target_properties(keygen PROPERTIES
 ##        RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR}
 ##)
+
+# 配置 cplusplus 可执行文件
+set_target_properties(cplusplus1 PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR}
+)
+
 ## 配置 exec 可执行文件
 #set_target_properties(exec PROPERTIES
 #        RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR}
