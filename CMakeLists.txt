@@ -13,10 +13,10 @@ set(CMAKE_CXX_STANDARD 20)
 add_subdirectory(cplusplus)
 
 
-add_executable( cplusplus1
-        src/main.cpp
-)
-target_link_libraries(cplusplus1 PRIVATE cplusplus)
+#add_executable( cplusplus1
+#        src/main.cpp
+#)
+#target_link_libraries(cplusplus1 PRIVATE cplusplus)
 
 # 最终可执行文件
 #add_executable(exec
@@ -70,7 +70,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR})  # 可执行文件（.ex
 ##)
 
 # 配置 cplusplus 可执行文件
-set_target_properties(cplusplus1 PROPERTIES
+set_target_properties(cplusplus PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${FINAL_OUTPUT_DIR}
 )
 
