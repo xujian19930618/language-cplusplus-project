@@ -2,7 +2,7 @@
 #include "main.h"
 #include <iostream>
 
-#include "class_oop/class_test.h"
+#include "class_test.h"
 
 int main() {
 
