@@ -2,12 +2,12 @@
 // Created by 徐剑 on 2026/1/15.
 //
 
-#include "class_test.h"
+#include "../../../study/class_oop/class_test.h"
 #include <iostream>
 
 
 #include "Box.h"
-#include "Shape.h"
+#include "../../../study/class_oop/Shape.h"
 
 using namespace std;
 

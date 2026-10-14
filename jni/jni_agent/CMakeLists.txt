@@ -5,7 +5,7 @@ add_library(agent SHARED
 )
 #target_include_directories(agent PUBLIC inc)
 
-find_package(JNI REQUIRED)
+find_package(jni REQUIRED)
 target_include_directories(agent
         PUBLIC inc
         PRIVATE ${JNI_INCLUDE_DIRS}

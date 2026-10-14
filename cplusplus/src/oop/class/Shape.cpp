@@ -2,7 +2,7 @@
 // Created by 徐剑 on 2026/1/15.
 //
 
-#include "Shape.h"
+#include "../../../study/class_oop/Shape.h"
 
 
 // 基类成员函数
